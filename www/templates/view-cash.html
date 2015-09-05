@@ -1,0 +1,24 @@
+<div ng-hide="currentState!='CASH'">
+    <div class="list card">
+        <div class="item item-divider">Insert Cash And Press "Done" When Complete</div>
+        <div class="item item-body">
+            <p>
+                <h2>Total Inserted $ {{currentUser.credit.toFixed(2) || 0}}</h2>
+            </p>
+            <div ng-show="settings.debugMode" class="list card">
+                <div class="item item-divider">Debug Mode Enabled</div>
+                <div class="item item-body">
+                    <button ng-click="credit('BILL1');">{{settings.BILL1}}</button>
+                    <button ng-click="credit('BILL2');">{{settings.BILL2}}</button>
+                    <button ng-click="credit('BILL3');">{{settings.BILL3}}</button>
+                    <button ng-click="credit('BILL4');">{{settings.BILL4}}</button>
+                    <button ng-click="credit('BILL5');">{{settings.BILL5}}</button>
+                    <button ng-click="credit('BILL6');">{{settings.BILL6}}</button>
+                    <button ng-click="credit('BILL7');">{{settings.BILL7}}</button>
+                    <button ng-click="credit('CLEAR');">Clear</button>
+                </div>
+            </div>
+            <button class="button button-block button-energized" ng-click="finalize()">Done</button>
+        </div>
+    </div>
+</div>

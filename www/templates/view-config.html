@@ -1,0 +1,25 @@
+<div ng-hide="currentState!='CONFIG'">
+    <div class="list card">
+        <div class="item item-divider">Verify Configuration & Press Save When Complete</div>
+        <div class="item item-body">
+            <ion-list>
+                <label class="item item-input item-floating-label"><span class="input-label">Operator Username</span> <input type="text" placeholder="Operator Username" ng-model="settings.OWNER"></label>
+                <label class="item item-input item-floating-label"><span class="input-label">Operator Password</span> <input type="password" placeholder="Operator Password" ng-model="settings.PASSWORD"></input></label>
+                <label class="item item-input item-floating-label"><span class="input-label">API Key</span> <input type="text" placeholder="API Key" ng-model="settings.APIKEY"></label>
+                <label class="item item-input item-floating-label"><span class="input-label">API Secret</span> <input type="text" placeholder="API Secret" ng-model="settings.APISECRET"></label>
+                <ion-toggle  ng-model="settings.debugMode">
+                    Enable Debug Mode
+                </ion-toggle>
+                <h3>Bill Denominations</h3>
+                <label class="item item-input"><span class="input-label">BILL1</span> <input type="number" ng-model="settings.BILL1"></label>
+                <label class="item item-input"><span class="input-label">BILL2</span> <input type="number" ng-model="settings.BILL2"></label>
+                <label class="item item-input"><span class="input-label">BILL3</span> <input type="number" ng-model="settings.BILL3"></label>
+                <label class="item item-input"><span class="input-label">BILL4</span> <input type="number" ng-model="settings.BILL4"></label>
+                <label class="item item-input"><span class="input-label">BILL5</span> <input type="number" ng-model="settings.BILL5"></label>
+                <label class="item item-input"><span class="input-label">BILL6</span> <input type="number" ng-model="settings.BILL6"></label>
+                <label class="item item-input"><span class="input-label">BILL7</span> <input type="number" ng-model="settings.BILL7"></label>
+                <button class="button button-block button-energized" ng-click="persist();">Save</button>
+            </ion-list>
+        </div>
+    </div>
+</div>
