@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="net.valortech.kiosk" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>Expresscoin ATM</name>
+<widget id="net.valortech.kiosk" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>National Bitcoin ATM</name>
   <description>
         An ATM for Expresscoin Customers
     </description>
-  <author email="dev@valortech.net" href="http://www.expresscoin.com/">
+  <author email="dev@valortech.net" href="http://www.nationalbitcoinatm.com/">
  	ValorTech
     </author>
   <content src="index.html"/>
