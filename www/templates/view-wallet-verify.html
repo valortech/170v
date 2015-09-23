@@ -1,0 +1,24 @@
+<div ng-hide="currentState!='WALLETVERIFY'">
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row">
+        <div class="col col-10"></div>
+        <div class="col">
+        <h1>Please Confirm That<br>
+            {{currentUser.Wallet}}<br>
+            Is The Correct Address<br>
+        </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-10"></div>
+        <div class="col">
+            <ion-list-item>
+                <button class="button button-block button-huge button-energized" ng-click="setState('CASH')">Confirm</button>
+            </ion-list-item>
+        </div>
+        <div class="col col-10"></div>
+    </div>
+</div>

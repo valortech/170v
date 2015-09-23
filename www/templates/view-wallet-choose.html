@@ -1,0 +1,23 @@
+<div ng-hide="currentState!='WALLETCHOOSE'">
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row"><h1>Where Should We Send<br>Your Bitcoin?</h1></div>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+
+    <div class="row">
+        <div class="col col-20"></div>
+        <div class="col"><h2>A New Wallet</h2><br>
+            <button class="button button-block button-large button-energized" ng-click="setState('WALLETNEW')">Scan QR Code</button>
+        </div>
+        <div class="col col-20"></div>
+    </div>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row">
+        <div class="col col-20"></div>
+        <div class="col"><h2>My Existing Wallet</h2><br>
+            <button class="button button-block button-large button-energized" ng-click="setState('WALLETLIST')">Existing</button>
+        </div>
+        <div class="col col-20"></div>
+    </div>
+</div>

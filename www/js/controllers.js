@@ -321,12 +321,60 @@ angular.module('atm.controllers', [])
         templateUrl: 'templates/view-verify.html'
     }
 })
+.directive('verifyViewBasic',function(){
+    console.log("Loading directive verify-view-basic");
+    return {
+        restrict: 'E',
+        replace: 'true',
+        templateUrl: 'templates/view-verify-basic.html'
+    }
+})
+.directive('verifyViewId',function(){
+    console.log("Loading directive verify-view-id");
+    return {
+        restrict: 'E',
+        replace: 'true',
+        templateUrl: 'templates/view-verify-id.html'
+    }
+})
+.directive('verifyViewSsn',function(){
+    console.log("Loading directive verify-view-ssn");
+    return {
+        restrict: 'E',
+        replace: 'true',
+        templateUrl: 'templates/view-verify-ssn.html'
+    }
+})
 .directive('walletView',function(){
     console.log("Loading directive wallet-view");
     return {
         restrict: 'E',
         replace: 'true',
         templateUrl: 'templates/view-wallet.html'
+    }
+})
+.directive('walletViewChoose',function(){
+    console.log("Loading directive wallet-view-choose");
+    return {
+        restrict: 'E',
+        replace: 'true',
+        templateUrl: 'templates/view-wallet-choose.html'
+    }
+})
+.directive('walletViewNew',function(){
+    console.log("Loading directive wallet-view-new");
+    return {
+        restrict: 'E',
+        replace: 'true',
+        templateUrl: 'templates/view-wallet-new.html'
+    }
+})
+.directive('walletViewVerify',function(){
+    console.log("Loading directive wallet-view-verify");
+    return {
+        restrict: 'E',
+        replace: 'true',
+        templateUrl: 'templates/view-wallet-verify.html'
     }
 })
 .directive('cashView',function(){

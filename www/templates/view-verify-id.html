@@ -1,0 +1,33 @@
+<div ng-hide="currentState!='VERIFYID'">
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row">
+        <div class="col">
+            <h2>Hold Your ID Up to<br>
+                The Camera and Scan<br>
+                To Purchase Up To<br>
+                $2,500 a Day.
+            </h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-20"></div>
+        <div class="col">
+            <canvas id="id-area"></canvas>
+        </div>
+        <div class="col col-20"></div>
+    </div>
+    <div class="row">
+        <div class="col col-20"></div>
+        <div class="col">
+            <button class="button button-block button-huge button-deenergized" ng-click="scanID()">Scan ID/button>
+        </div>
+        <div class="col col-20"></div>
+    </div>
+    <div class="row">
+        <div class="col col-20"></div>
+        <div class="col">
+            <button class="button button-block button-huge button-energized" ng-click="verifyInfo('ID')">Verify</button>
+        </div>
+        <div class="col col-20"></div>
+    </div>
+</div>

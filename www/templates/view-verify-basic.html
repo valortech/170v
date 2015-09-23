@@ -1,0 +1,40 @@
+<div ng-hide="currentState!='VERIFYBASIC'">
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row">
+        <div class="col">
+            <h2>Enter The Following<br>
+                Information To Purchase<br>Up To $1,000 a Day.
+            </h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-20"></div>
+        <div class="col">
+            <ion-list>
+                <ion-list-item>
+                    <label class="item item-input"><input type="text" placeholder="First Name" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }"  ng-model="currentUser.FirstName"></label>
+                </ion-list-item>
+                <ion-list-item>
+                    <label class="item item-input"><input type="text" placeholder="Last Name" ng-model="currentUser.LastName" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } } "></label>
+                </ion-list-item>
+                <ion-list-item>
+                    <label class="item item-input"><input type="date" placeholder="Date of Birth" ng-model="currentUser.DOB"></label>
+                </ion-list-item>
+                <ion-list-item>
+                    <label class="item item-input"><input type="text" placeholder="Zip Code" ng-model="currentUser.ZIP"></label>
+                </ion-list-item>
+            </ion-list>
+        </div>
+        <div class="col col-20"></div>
+    </div>
+    <div class="row"><h2>&nbsp;&nbsp;</h2></div>
+    <div class="row">
+        <div class="col col-20"></div>
+        <div class="col">
+            <ion-list-item>
+                <button class="button button-block button-huge button-energized" ng-click="verifyInfo('BASIC')">Verify</button>
+            </ion-list-item>
+        </div>
+        <div class="col col-20"></div>
+    </div>
+</div>

@@ -1,24 +1,84 @@
 <div ng-hide="currentState!='CASH'">
-    <div class="list card">
-        <div class="item item-divider">Insert Cash And Press "Done" When Complete</div>
-        <div class="item item-body">
-            <p>
-                <h2>Total Inserted $ {{currentUser.credit.toFixed(2) || 0}}</h2>
-            </p>
-            <div ng-show="settings.debugMode" class="list card">
-                <div class="item item-divider">Debug Mode Enabled</div>
-                <div class="item item-body">
-                    <button ng-click="credit('BILL1');">{{settings.BILL1}}</button>
-                    <button ng-click="credit('BILL2');">{{settings.BILL2}}</button>
-                    <button ng-click="credit('BILL3');">{{settings.BILL3}}</button>
-                    <button ng-click="credit('BILL4');">{{settings.BILL4}}</button>
-                    <button ng-click="credit('BILL5');">{{settings.BILL5}}</button>
-                    <button ng-click="credit('BILL6');">{{settings.BILL6}}</button>
-                    <button ng-click="credit('BILL7');">{{settings.BILL7}}</button>
-                    <button ng-click="credit('CLEAR');">Clear</button>
-                </div>
-            </div>
-            <button class="button button-block button-energized" ng-click="finalize()">Done</button>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row">
+        <div class="col">
+            <h1>Insert Bills Now</h1>
         </div>
     </div>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row">
+        <div class="col padding-left"></div>
+        <div class="col">
+            <h2>$</h2>
+            <div class="giant">{{currentUser.credit.toFixed(2) || 0}}</div>
+        </div>
+        <div class="col col-10"></div>
+    </div>
+    <div class="row">
+        <div class="col col-20"></div>
+        <div class="col">
+            <h1 class="orange">{{currentUser.amt.toFixed(8) || 0}}</h1>
+        </div>
+        <div class="col col-20"></div>
+    </div>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row">
+        <div class="col col-20"></div>
+        <div class="col">Sending To:<br>{{currentUser.Wallet}}</div>
+        <div class="col col-20"></div>
+    </div>
+    <div class="row">
+        <div class="col col-20"></div>
+        <div class="col">
+            <button class="button button-block button-large button-deenergized" ng-click="setState('WALLETVERIFY')">Done</button>
+        </div>
+        <div class="col col-20"></div>
+    </div>
+    <div class="row">
+        <div class="col col-20"></div>
+        <div class="col">
+            <h2>1 BTC = ${{settings.BTCUSD}}</h2>
+        </div>
+        <div class="col col-20"></div>
+    </div>
+    <div ng-show="settings.debugMode" class="list card">
+        <div class="item item-divider">Debug Mode Enabled</div>
+        <div class="item item-body">
+            <button ng-click="credit('BILL1');">{{settings.BILL1}}</button>
+            <button ng-click="credit('BILL2');">{{settings.BILL2}}</button>
+            <button ng-click="credit('BILL3');">{{settings.BILL3}}</button>
+            <button ng-click="credit('BILL4');">{{settings.BILL4}}</button>
+            <button ng-click="credit('BILL5');">{{settings.BILL5}}</button>
+            <button ng-click="credit('BILL6');">{{settings.BILL6}}</button>
+            <button ng-click="credit('BILL7');">{{settings.BILL7}}</button>
+            <button ng-click="credit('CLEAR');">Clear</button>
+        </div>
+    </div>
+        <!--
+        <div class="list card">
+            <div class="item item-divider">Insert Cash And Press "Done" When Complete</div>
+            <div class="item item-body">
+                <p>
+                    <h2>Total Inserted $ {{currentUser.credit.toFixed(2) || 0}}</h2>
+                </p>
+                <div ng-show="settings.debugMode" class="list card">
+                    <div class="item item-divider">Debug Mode Enabled</div>
+                    <div class="item item-body">
+                        <button ng-click="credit('BILL1');">{{settings.BILL1}}</button>
+                        <button ng-click="credit('BILL2');">{{settings.BILL2}}</button>
+                        <button ng-click="credit('BILL3');">{{settings.BILL3}}</button>
+                        <button ng-click="credit('BILL4');">{{settings.BILL4}}</button>
+                        <button ng-click="credit('BILL5');">{{settings.BILL5}}</button>
+                        <button ng-click="credit('BILL6');">{{settings.BILL6}}</button>
+                        <button ng-click="credit('BILL7');">{{settings.BILL7}}</button>
+                        <button ng-click="credit('CLEAR');">Clear</button>
+                    </div>
+                </div>
+                <button class="button button-block button-energized" ng-click="finalize()">Done</button>
+            </div>
+        </div>
+        -->
 </div>
