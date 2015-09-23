@@ -1,16 +1,15 @@
-<div ng-hide="currentState!='HOME'">
-    <div class="list card">
-        <div class="item item-divider">Select Your Product</div>
-        <div class="item item-body">
-            <marquee ng-hide="coins" direction="right"><ion-spinner></ion-spinner>We're.getting.there.../\‾\סּۨۚ؟סּ_۪__۪_סּۨۚ؟סּ_۪_/\‾\‾\‾\_۪_סּۨۚ؟סּ_۪_۪_/‾‾‾‾‾‾\‾\סּۨۚ؟סּ_۪_/\‾\_۪_۪<ion-spinner></ion-spinner>≧◔◡◔≦﻿...Connecting..to..expresscoin...≧◔◡◔≦<ion-spinner></ion-spinner></marquee>
-            <ion-list>
-                <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="coin in coins" type="item-text-wrap" ng-click="productSelected(coin)">
-                    <img ng-src="{{coin.LogoUrl}}">
-                    <h2>{{coin.Name}}</h2>
-                    <p><marquee>${{coin.SellPrice.toFixed(2)}}</marquee></p>
-                    <i class="icon ion-chevron-right icon-accessory"></i>
-                </ion-item>
-            </ion-list>
+<div id="homescreen" ng-hide="currentState!='HOME'" >
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row row-center">
+        <div class="col col-20"></div>
+        <div class="col col-center">
+            <button class="button button-block button-huge button-energized" ng-click="setState('ACCOUNT')">Buy Bitcoin</button>
         </div>
+        <div class="col col-20"></div>
     </div>
 </div>

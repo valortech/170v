@@ -1,16 +1,21 @@
 <div ng-hide="currentState!='LOGIN'">
-    <div class="list card">
-        <div class="item item-divider">Login</div>
-        <div class="item item-body">
-            <ion-list-item>
-                <label class="item item-input item-floating-label"><span class="input-label">Email or Username</span> <input type="text" placeholder="Email or Username" ng-model="currentUser.UsernameOrEmail"></label>
-            </ion-list-item>
-            <ion-list-item>
-                <label class="item item-input item-floating-label"><span class="input-label">Password</span><input type="password" placeholder="Password" ng-model="currentUser.Password"></label>
-            </ion-list-item>
-            <ion-list-item>
-                <button class="button button-block button-energized" ng-click="login()">Login</button>
-            </ion-list-item>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row">
+        <div class="col col-10"></div>
+        <div class="col">
+            <ion-list>
+                    <ion-list-item>
+                        <label class="item item-input"><input type="text" placeholder="Email or Username" ng-model="currentUser.UsernameOrEmail"></label>
+                    </ion-list-item>
+                    <ion-list-item>
+                        <label class="item item-input"><input type="password" placeholder="Password" ng-model="currentUser.Password"></label>
+                    </ion-list-item>
+                    <ion-list-item>
+                        <button class="button button-block button-huge button-energized" ng-click="login()">Login</button>
+                    </ion-list-item>
+            </ion-list>
         </div>
+        <div class="col col-10"></div>
     </div>
 </div>

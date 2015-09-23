@@ -18,11 +18,14 @@ angular.module('atm.controllers', [])
         if($rootScope.currentState != "HOME" && state == "HOME"){
             //We do it this way to avoid a very hard to track down bug related to $scope.$apply and deleting currentUser
             $rootScope.currentState = state;
+            $scope.viewBackground = "background-home";
             $scope.reset();
         }else {
+
             if(state != "HOME") {
                 $timeout(function () {
                     $rootScope.currentState = state;
+                    $scope.viewBackground = "background-default";
                     if (state == "THANKS") {
                         $timeout(function () {
                             $scope.setState("HOME");
@@ -49,6 +52,7 @@ angular.module('atm.controllers', [])
 
 
     init = function(){
+        /*
       $interval(function () {
         console.log("Updating Prices");
         $http.get("https://api.expresscoin.com/api/Currencies")
@@ -61,6 +65,7 @@ angular.module('atm.controllers', [])
               console.error("Failed to get coins: " + status);
             });
       }, 10000);
+      */
       if(window.localStorage["kioskconfig"]) {
         $rootScope.settings = JSON.parse(window.localStorage["kioskconfig"]);
         $scope.setState("HOME");
@@ -271,8 +276,8 @@ angular.module('atm.controllers', [])
     };
 
     $scope.register = function(){
-      alert("Welcome "+$rootScope.currentUser.UsernameOrEmail);
-        $scope.setState("CASH");
+      //alert("Welcome "+$rootScope.currentUser.UsernameOrEmail);
+      $scope.setState("USERVERIFY");
     };
     init();
 })
@@ -301,11 +306,19 @@ angular.module('atm.controllers', [])
     }
 })
 .directive('newuserView',function(){
-    console.log("Loading directive register-view");
+    console.log("Loading directive newuser-view");
     return {
         restrict: 'E',
         replace: 'true',
         templateUrl: 'templates/view-newuser.html'
+    }
+})
+.directive('verifyView',function(){
+    console.log("Loading directive verify-view");
+    return {
+        restrict: 'E',
+        replace: 'true',
+        templateUrl: 'templates/view-verify.html'
     }
 })
 .directive('walletView',function(){

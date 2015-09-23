@@ -1,15 +1,21 @@
-<div ng-hide="currentState!='ACCOUNT'">
-    <ion-list>
-        <div ng-hide="currentForm">
-            <div class="list card">
-                <div class="item item-divider">Login or Register?</div>
-                <div class="item item-body">
-                    <div class="button-bar">
-                        <button class="button button-energized" ng-click="setState('NEWUSER')">New User</button>
-                        <button class="button button-energized" ng-click="setState('LOGIN')">Login</button>
-                    </div>
-                </div>
-            </div>
+<div ng-hide="currentState!='ACCOUNT'" >
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row row-center">
+        <div class="col col-20"></div>
+        <div class="col col-60 col-center">
+            <h2>New User?</h2><br>
+            <button class="button button-block button-huge button-energized"  ng-click="setState('NEWUSER')">Sign Up</button>
         </div>
-    </ion-list>
+        <div class="col col-20"></div>
+    </div>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row row-bottom">
+        <div class="col col-20"></div>
+        <div class="col col-60 col-center">
+            <h2>Existing User?</h2><br>
+            <button class="button button-block button-huge button-energized"  ng-click="setState('LOGIN')">Login</button>
+        </div>
+        <div class="col col-20"></div>
+    </div>
 </div>

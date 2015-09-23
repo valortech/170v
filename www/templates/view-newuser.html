@@ -1,22 +1,40 @@
 <div ng-hide="currentState!='NEWUSER'">
-    <div class="list card">
-        <div class="item item-divider">Enter Your Info & Press "Register" to continue</div>
-        <div class="item item-body">
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row">
+        <div class="col col-20"></div>
+        <div class="col">
+            <ion-list>
+                <ion-list-item>
+                    <label class="item item-input"><input type="email" placeholder="Email" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }"  ng-model="currentUser.UsernameOrEmail"></label>
+                </ion-list-item>
+                <ion-list-item>
+                    <label class="item item-input"><input type="tel" placeholder="Telephone" ng-model="currentUser.Phone"></label>
+                </ion-list-item>
+                <ion-list-item>
+                    <label class="item item-input"><input type="password" placeholder="Password" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } } "ng-model="currentUser.Password"></label>
+                </ion-list-item>
+            </ion-list>
+        </div>
+        <div class="col col-20"></div>
+    </div>
+    <div class="row"><h2>&nbsp;&nbsp;</h2></div>
+    <div class="row">
+        <div class="col col-20"></div>
+        <div class="col">
             <ion-list-item>
-                <label class="item item-input item-floating-label"><span class="input-label">Email</span> <input type="email" placeholder="Email" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }"  ng-model="currentUser.UsernameOrEmail"></label>
-            </ion-list-item>
-            <ion-list-item>
-                <label class="item item-input item-floating-label"><span class="input-label">Telephone</span> <input type="tel" placeholder="Telephone" ng-model="currentUser.Phone"></label>
-            </ion-list-item>
-            <ion-list-item>
-                <label class="item item-input item-floating-label"><span class="input-label">Password</span> <input type="password" placeholder="Password" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } } "ng-model="currentUser.Password"></label>
-                <div ng-show="currentUser.Password != currentUser.Password2">
-                    <label class="item item-input item-floating-label"><span class="input-label">Password*</span> <input type="password" placeholder="Password" ng-model="currentUser.Password2"></label>
-                </div>
-            </ion-list-item>
-            <ion-list-item>
-                <button class="button button-block button-energized" ng-click="register()">Register</button>
+                <button class="button button-block button-huge button-energized" ng-click="register()">Sign Up</button>
             </ion-list-item>
         </div>
+        <div class="col col-20"></div>
+    </div>
+    <div class="row"><h2>&nbsp;&nbsp;</h2></div>
+    <div class="row">
+        <div class="col col-20"></div>
+        <div class="col col-center">
+        <b>*Be sure to enter an email addres that you have access to.
+                <br>This is how we will be sending you your transaction receipts!</b>
+        </div>
+        <div class="col col-20"></div>
     </div>
 </div>

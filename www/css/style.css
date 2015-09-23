@@ -1,1 +1,85 @@
-/* Empty. Add your own CSS if you like */
+/*
+f89c33 - light orange for all the buttons. also orange for fonts and bitcoin logo
+d87d29 - dark orange bottom shadows behind buttons
+b6aea6 - light gray on buttons
+838383 - dark gray on buttons
+*/
+
+body{
+    background-color: transparent;
+}
+
+.background-home{
+    background-color: transparent;
+    background-image: url('img/home-background.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    z-index: 2;
+}
+
+.background-default{
+    background-color: transparent;
+    background-image: url('img/background.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    z-index: 2;
+}
+
+.item-input{
+    height: 5em;
+    margin: 5px;
+    border: solid 1px black;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #f89c33;
+    font-size: 1.5em;
+}
+
+h1{
+    font-size: 5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+.button.button-energized{
+    background-color: #f89c33;
+    border-bottom-color: #d87d29;
+    border-bottom: solid;
+}
+
+.button.button-deenergized{
+    background-color: #b6aea6;
+    border-bottom-color: #838383;
+    border-bottom: solid;
+    color: white;
+}
+
+.button.button-large{
+    height: 120px;
+    font-size: 2.5em;
+    border-bottom: solid 10px;
+}
+
+.button.button-huge{
+    height: 120px;
+    font-size: 4em;
+    border-bottom: solid 10px;
+    border-bottom-color: #d87d29;
+}
