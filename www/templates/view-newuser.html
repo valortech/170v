@@ -1,18 +1,20 @@
 <div ng-hide="currentState!='NEWUSER'">
     <div class="row"><h1>&nbsp;&nbsp;</h1></div>
-    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
     <div class="row">
         <div class="col col-20"></div>
         <div class="col">
             <ion-list>
                 <ion-list-item>
-                    <label class="item item-input"><input type="email" placeholder="Email" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }"  ng-model="currentUser.UsernameOrEmail"></label>
+                    <label class="item item-input"><input type="text" placeholder="User Name" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }"  ng-model="currentUser.UserName" required></label>
                 </ion-list-item>
                 <ion-list-item>
-                    <label class="item item-input"><input type="tel" placeholder="Telephone" ng-model="currentUser.Phone"></label>
+                    <label class="item item-input"><input type="email" placeholder="Email" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }"  ng-model="currentUser.Email" required></label>
                 </ion-list-item>
                 <ion-list-item>
-                    <label class="item item-input"><input type="password" placeholder="Password" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } } "ng-model="currentUser.Password"></label>
+                    <label class="item item-input"><input type="number" placeholder="6 to 10 Digit PIN" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }" ng-model="currentUser.Password" required></label>
+                </ion-list-item>
+                <ion-list-item>
+                    <label class="item item-input"><input type="tel" placeholder="Telephone" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }" ng-model="currentUser.Phone" required></label>
                 </ion-list-item>
             </ion-list>
         </div>

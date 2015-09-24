@@ -1,11 +1,10 @@
-<div ng-hide="currentState!='VERIFYSSN'">
+<div ng-hide="currentState!='VERIFYPHONE'">
     <div class="row"><h1>&nbsp;&nbsp;</h1></div>
     <div class="row">
         <div class="col">
-            <h2>Enter Your<br>
-                Social Security Number<br>
-                To Purchase Up To<br>
-                $9,000 a Day.
+            <h2>We sent a confirmation code to<br>
+                {{currentUser.Phone}}<br>
+                Please enter it here to continue
             </h2>
         </div>
     </div>
@@ -16,7 +15,7 @@
         <div class="col">
             <ion-list>
                 <ion-list-item>
-                    <label class="item item-input"><input type="text" placeholder="SSN" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }"  ng-model="currentUser.Ssn"></label>
+                    <label class="item item-input"><input type="text" placeholder="Code" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }"  ng-model="currentUser.Code"></label>
                 </ion-list-item>
             </ion-list>
         </div>
@@ -27,7 +26,7 @@
         <div class="col col-20"></div>
         <div class="col">
             <ion-list-item>
-                <button class="button button-block button-huge button-energized" ng-click="verifyInfo('SSN')">Verify</button>
+                <button class="button button-block button-huge button-energized" ng-click="verifyInfo('PHONE')">Confirm</button>
             </ion-list-item>
         </div>
         <div class="col col-20"></div>

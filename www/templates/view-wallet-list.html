@@ -1,0 +1,20 @@
+<div ng-hide="currentState!='WALLETLIST'">
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="row"><h1>&nbsp;&nbsp;</h1></div>
+    <div class="list card">
+        <div class="item item-divider">Destination wallet</div>
+        <div class="item item-body">
+            <ion-list>
+                <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="wallet in currentUser.wallets" type="item-text-wrap" ng-click="walletSelected(wallet)">
+                    <img ng-src="{{wallet.CurrencyLogoUrl}}">
+                    <h2>{{wallet.CurrencyName}}</h2>
+                    <p>{{wallet.Address}}</p>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </ion-item>
+                <ion-item>
+                    <button class="button button-block button-energized" ng-click="scanQR()">Scan QR Code</button>
+                </ion-item>
+            </ion-list>
+        </div>
+    </div>
+</div>

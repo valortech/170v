@@ -10,23 +10,31 @@
         </div>
     </div>
     <div class="row">
-        <div class="col col-20"></div>
+        <div class="col col-10"></div>
         <div class="col">
-            <canvas id="id-area"></canvas>
+            <h3>Front</h3><br>
+            <img ng-src="{{currentUser.FrontsideImage}}">
         </div>
-        <div class="col col-20"></div>
+        <div class="col">
+            <h3>Back</h3><br>
+            <img ng-src="{{currentUser.BacksideImage}}">
+        </div>
+        <div class="col col-10"></div>
+    </div>
+    <div class="row">
+        <div class="col col-10"></div>
+        <div class="col">
+            <button class="button button-block button-large button-deenergized" ng-click="scanID('FRONT')">Scan ID Front</button>
+        </div>
+        <div class="col">
+            <button class="button button-block button-large button-deenergized" ng-click="scanID('BACK')">Scan ID Back</button>
+        </div>
+        <div class="col col-10"></div>
     </div>
     <div class="row">
         <div class="col col-20"></div>
         <div class="col">
-            <button class="button button-block button-huge button-deenergized" ng-click="scanID()">Scan ID/button>
-        </div>
-        <div class="col col-20"></div>
-    </div>
-    <div class="row">
-        <div class="col col-20"></div>
-        <div class="col">
-            <button class="button button-block button-huge button-energized" ng-click="verifyInfo('ID')">Verify</button>
+            <button class="button button-block button-large button-energized" ng-click="verifyInfo('ID')">Verify</button>
         </div>
         <div class="col col-20"></div>
     </div>
